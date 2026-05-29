@@ -2,26 +2,34 @@
 
 Status: actively maintained.
 
-This project performs risk analysis for real estate investing. It calculates a loan amortization schedule, evaluates monthly income and expenses, and estimates the maximum property value.
+This project implements a functional MVP of a multi-agent real-estate investment analyst. It runs deterministic mock-source data collection, converges source agreement with confidence levels, computes investment metrics, performs risk scoring, and returns a transparent recommendation.
 
-See `docs/README.txt` for the original project description.
+See `docs/` for product requirements and architecture specs.
 
 ## Repository contents
 
-Lightweight real-estate risk analysis tools with a calculator, browser UI, and supporting scripts.
-
-- `calculator.py` — loan and property calculation logic
-- `risk_analysis.py` — risk analysis routines
-- `index.html` — web UI entry point
-- `README.txt` — original project notes
+- `src/real_estate_investor/orchestrator.py` — orchestrates the agent workflow and final recommendation
+- `src/real_estate_investor/data_fetching.py` — parallel-source mock data convergence and attribution
+- `src/real_estate_investor/risk_assessment.py` — market/property/income risk scoring
+- `src/real_estate_investor/calculation.py` — cap rate, IRR, cash-on-cash, equity multiple, DSCR, scenarios
+- `src/real_estate_investor/cli.py` — runnable CLI entry point
+- `data/mock/properties.json` — deterministic source fixtures
+- `tests/` — unit/integration/CLI tests
 - `README.md` — project overview
-- `LICENSE` — license text
+- `docs/` — problem, architecture, schemas, and constraints
 
 ## Maturity review
 
-**Maturity:** Prototype-level calculator that is usable, but still closer to a utility than a product.
+**Maturity:** Functional MVP with agent modules, orchestration, CLI, and tests.
 
 **What remains to make this a functional application:**
-- Package the scripts into a single runnable application entry point.
-- Add validation and automated tests for the calculator logic.
-- Polish the UI/workflow so users can run it without touching the internals.
+- Replace mock data sources with real API/scraping connectors.
+- Add persistent storage and human-review workflows for data conflicts.
+- Add a UI (web or notebook) for non-CLI usage.
+- Add live backtesting against historical outcomes.
+
+## Usage
+
+```bash
+python -m real_estate_investor.cli analyze --address "123 Main St, Springfield, IL"
+```

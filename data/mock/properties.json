@@ -1,0 +1,77 @@
+{
+  "123 Main St, Springfield, IL": {
+    "sources": {
+      "api_zillow": {
+        "address": "123 Main St, Springfield, IL",
+        "square_footage": 1820,
+        "year_built": 1998,
+        "property_type": "single_family",
+        "bedrooms": 3,
+        "bathrooms": 2.0,
+        "current_list_price": 285000,
+        "estimated_market_value": 292000,
+        "tax_history": [
+          { "year": 2022, "amount": 3600 },
+          { "year": 2023, "amount": 3720 },
+          { "year": 2024, "amount": 3810 }
+        ],
+        "rental_estimate_low": 2100,
+        "rental_estimate_high": 2350,
+        "crime_rate": 4.1,
+        "school_rating": 7.1,
+        "population_trend": "stable",
+        "unemployment_rate": 4.6,
+        "median_income": 68000,
+        "vacancy_rate": 5.2
+      },
+      "llm_realtor_parse": {
+        "address": "123 Main St, Springfield, IL",
+        "square_footage": 1835,
+        "year_built": 1998,
+        "property_type": "single_family",
+        "bedrooms": 3,
+        "bathrooms": 2.0,
+        "current_list_price": 286000,
+        "estimated_market_value": 291000,
+        "rental_estimate_low": 2080,
+        "rental_estimate_high": 2320,
+        "crime_rate": 4.0,
+        "school_rating": 7.0,
+        "population_trend": "stable",
+        "unemployment_rate": 4.7,
+        "median_income": 67500,
+        "vacancy_rate": 5.1
+      },
+      "scrape_county_site": {
+        "address": "123 Main St, Springfield, IL",
+        "square_footage": 1820,
+        "year_built": 1998,
+        "property_type": "single_family",
+        "bedrooms": 3,
+        "bathrooms": 2.0,
+        "current_list_price": 284500,
+        "estimated_market_value": 293000,
+        "rental_estimate_low": 2125,
+        "rental_estimate_high": 2340,
+        "crime_rate": 4.2,
+        "school_rating": 7.2,
+        "population_trend": "stable",
+        "unemployment_rate": 4.6,
+        "median_income": 68200,
+        "vacancy_rate": 5.0
+      }
+    }
+  },
+  "default": {
+    "sources": {
+      "api_default": {
+        "address": "default",
+        "property_type": "single_family",
+        "current_list_price": 250000,
+        "rental_estimate_low": 1600,
+        "rental_estimate_high": 1900,
+        "population_trend": "stable"
+      }
+    }
+  }
+}
