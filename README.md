@@ -16,3 +16,12 @@ Lightweight real-estate risk analysis tools with a calculator, browser UI, and s
 - `README.txt` — original project notes
 - `README.md` — project overview
 - `LICENSE` — license text
+
+## Maturity review
+
+**Maturity:** Prototype-level calculator that is usable, but still closer to a utility than a product.
+
+**What remains to make this a functional application:**
+- Package the scripts into a single runnable application entry point.
+- Add validation and automated tests for the calculator logic.
+- Polish the UI/workflow so users can run it without touching the internals.
